@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perencanaan Belajar Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" height="100px" width="100px" class="logo">
+        <h1>Perencanaan Belajar Online</h1>
+        <h3>Oleh : Aurel dan Adev</h3>
+
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Nama Tugas">
+            <input type="date" id="taskDeadline">
+            <select id="taskPriority">
+                <option value="High">Tinggi</option>
+                <option value="Medium">Sedang</option>
+                <option value="Low">Rendah</option>
+            </select>
+            <button onclick="addTask()">Tambah Tugas</button>
+        </div>
+
+        <div class="task-controls">
+            <button onclick="sortByDeadline()">Urut berdasar Deadline</button>
+            <button onclick="sortByPriority()">Urut Berdasar Prioritas</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="ai-box">
+            <h3>Dapatkan Saran AI</h3>
+            <textarea id="aiInput" placeholder="Masukkan daftar tugas..."></textarea>
+            <button onclick="getAiSuggestion()">Minta Saran</button>
+            <p id="aiResult"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
